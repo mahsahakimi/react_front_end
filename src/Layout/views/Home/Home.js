@@ -1,26 +1,15 @@
-import React,{useState,useEffect} from 'react';
-// import BlogPost from '../../components/BlogPost/BlogPost';
+import React, {useState, useEffect} from 'react';
 
 const Home = () => {
-    // const [posts,setPosts] = useState([]);
-
-    // useEffect(()=>{
-    //     console.log("Loading Data ...")
-    //     // fetch("https://jsonplaceholder.typicode.com/posts")
-    //     //         .then(res=>res.json())
-    //     //         .then(data=>setPosts(data))
-    // },[])
-
     return (
         <div>
-            <h1>HOME</h1>
-            {/* <main>
-                {
-                    posts.map((post)=>{
-                        return <BlogPost key={post.id} title={post.title} content={post.body}/>
-                    })
-                }
-            </main> */}
+            <h1>
+                Play and Learn
+            </h1>
+            <h4>
+                With the world's largest web developer site. 
+            </h4>
+            <a href="#signup">Get Started</a>
         </div>
     );
 }
