@@ -1,0 +1,8 @@
+#big-button {
+    border-radius: 5px;
+    display: inline-block;
+    margin: auto;
+    background-color: #f06236;
+    padding: 3%;
+    font-weight: 700;
+}

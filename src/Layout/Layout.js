@@ -2,6 +2,7 @@
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
+import Login from './components/Login/Login';
 // import BlogPost from './components/BlogPost/BlogPost';
 import './Layout.css';
 import Home from './views/Home/Home';
@@ -9,8 +10,9 @@ import Teachers from './views/Teachers/Teachers';
 import Students from './views/Students/Students';
 import Problems from './views/Problems/Problems';
 import About from './views/About/About';
+import Contact from './views/Contact/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import AuthContext from './AuthContext';
 
 const Layout = () => {
   return (
@@ -22,7 +24,9 @@ const Layout = () => {
           <Route path="/Teachers" element={<Teachers/>} />
           <Route path="/Students" element={<Students/>} />
           <Route path="/Problems" element={<Problems/>} />
+          <Route path="/Login" element={<Login/>} />
           <Route path="/About" element={<About/>} />
+          <Route path="/Contact" element={<Contact/>} />
       </Routes>
       <Footer />
     </Router>

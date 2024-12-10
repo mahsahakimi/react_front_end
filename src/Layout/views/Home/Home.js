@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import './Home.css';
 
 const Home = () => {
     return (
@@ -9,7 +10,7 @@ const Home = () => {
             <h4>
                 With the world's largest web developer site. 
             </h4>
-            <a href="#signup">Get Started</a>
+            <a href="#signup" id="big-button">Get Started</a>
         </div>
     );
 }
