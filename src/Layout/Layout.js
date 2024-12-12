@@ -3,7 +3,6 @@ import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 import Login from './components/Login/Login';
-// import BlogPost from './components/BlogPost/BlogPost';
 import './Layout.css';
 import Home from './views/Home/Home';
 import Teachers from './views/Teachers/Teachers';
@@ -12,7 +11,7 @@ import Problems from './views/Problems/Problems';
 import About from './views/About/About';
 import Contact from './views/Contact/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AuthContext from './AuthContext';
+// import AuthContext from './AuthContext';
 
 const Layout = () => {
   return (

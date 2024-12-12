@@ -3,10 +3,8 @@ import React from 'react';
 const Header = () => {
   return (
     <header className="header">
-      <h1>HEADER</h1>
+      <h1>Clever Climb</h1>
     </header>
   );
 }
 export default Header;
-
-// #TODO

@@ -35,6 +35,7 @@ const Problems = () => {
                     <thead>
                         <tr>
                             <th>Title</th>
+                            <th>Content</th>
                             <th>Difficulty</th>
                             <th>Solved #</th>
                             <th>Category</th>
@@ -43,7 +44,7 @@ const Problems = () => {
                     <tbody>
                         {
                         problems.map((problem)=>{
-                            return <Problem key={problem.id} title={problem.title} difficulty={problem.difficulty} solved={problem.solved} category={problem.category}/>
+                            return <Problem key={problem.id} title={problem.title} difficulty={problem.difficulty} solved={problem.solved} category={problem.category} content={problem.content} option_1={problem.option_1} option_2={problem.option_2} option_3={problem.option_3} option_4={problem.option_4}/>
                         })
                         }
                     </tbody>
