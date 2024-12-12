@@ -9,7 +9,6 @@ import Teachers from './views/Teachers/Teachers';
 import Students from './views/Students/Students';
 import Problems from './views/Problems/Problems';
 import About from './views/About/About';
-import Contact from './views/Contact/Contact';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 // import AuthContext from './AuthContext';
 
@@ -25,7 +24,6 @@ const Layout = () => {
           <Route path="/Problems" element={<Problems/>} />
           <Route path="/Login" element={<Login/>} />
           <Route path="/About" element={<About/>} />
-          <Route path="/Contact" element={<Contact/>} />
       </Routes>
       <Footer />
     </Router>
