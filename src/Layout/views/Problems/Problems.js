@@ -7,8 +7,8 @@ function sortTableByQuestionCount() {
     let rows = Array.from(table.rows).slice(1); 
 
     rows.sort((a, b) => {
-        let questiosA = parseInt(a.cells[2].innerText);
-        let questionsB = parseInt(b.cells[2].innerText);
+        let questiosA = parseInt(a.cells[3].innerText);
+        let questionsB = parseInt(b.cells[3].innerText);
         return questionsB - questiosA; 
     });
 
