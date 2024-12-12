@@ -1,11 +1,11 @@
 import React from 'react';
 import '../../views/Students/Students.css';
 
-const Student = ({name, username, email, photo}) => {
+const Student = ({name, score}) => {
   return (
     <tr>
       <td>{name}</td>
-      <td>{email.charCodeAt(0)}</td>
+      <td>{Number(score)}</td>
     </tr>
   );
 }

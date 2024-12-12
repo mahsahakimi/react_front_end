@@ -20,23 +20,15 @@ const Students = () => {
     const [students, setStudents] = useState([]);
 
     useEffect(()=>{
-        console.log("Loading Data ...")
+        // console.log("Loading Data ...")
         sortTableByScore();
-        fetch("https://jsonplaceholder.typicode.com/users")
+        fetch("http://localhost:8081/students")
                 .then(response=>response.json())
                 .then(data=>setStudents(data))
     },)
 
     return (
         <div>
-            {/* <h1>Students Table</h1>
-            <main>
-                {
-                    students.map((student)=>{
-                        return <Student key={student.id} name={student.name} username={student.username} email={student.email} photo={"https://via.placeholder.com/150/771796"}/>
-                    })
-                }
-            </main> */}
             <main>
                 <h1>All Students</h1>
                 <table id="studentsTable">
@@ -49,7 +41,7 @@ const Students = () => {
                     <tbody>
                         {
                             students.map((student)=>{
-                                return <Student key={student.id} name={student.name} username={student.username} email={student.email} photo={"https://via.placeholder.com/150/771796"}/>
+                                return <Student key={student.id} name={student.name} score={student.score}/>
                             })
                         }
                     </tbody>
@@ -62,3 +54,4 @@ const Students = () => {
 export default Students;
 
 // #TODO
+// <Student key={student.id} name={student.name} score={student.score} photo={"https://via.placeholder.com/150/771796"}/>

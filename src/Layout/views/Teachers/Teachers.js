@@ -1,4 +1,5 @@
 import React, {useState,useEffect} from 'react';
+import Teacher from '../../components/Teacher/Teacher';
 import './Teachers.css';
 
 function sortTableByQuestionCount() {
@@ -16,12 +17,14 @@ function sortTableByQuestionCount() {
 }
 
 const Teachers = () => {
+    const [teachers, setTeachers] = useState([]);
 
     useEffect(()=>{
+        // console.log("Loading Data ...")
         sortTableByQuestionCount();
-        // fetch("https://jsonplaceholder.typicode.com/users")
-        //         .then(response=>response.json())
-        //         .then(data=>setStudents(data))
+        fetch("http://localhost:8081/teachers")
+            .then(response=>response.json())
+            .then(data=>setTeachers(data))
     },)
 
     return (
@@ -36,22 +39,11 @@ const Teachers = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td><a href="#">Mr. John Doe</a></td>
-                            <td><a href="#">10</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">Ms. Jane Smith</a></td>
-                            <td><a href="#">8</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">Dr. Emma Williams</a></td>
-                            <td><a href="#">12</a></td>
-                        </tr>
-                        <tr>
-                            <td><a href="#">Mr. Alex Johnson</a></td>
-                            <td><a href="#">5</a></td>
-                        </tr>
+                        {
+                        teachers.map((teacher)=>{
+                            return <Teacher key={teacher.id} name={teacher.name} created={teacher.created}/>
+                        })
+                        }
                     </tbody>
                 </table>
             </main>

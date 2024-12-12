@@ -1,17 +1,13 @@
 import React from 'react';
 import '../../views/Problems/Problems.css';
 
-const Problem = ({title, content}) => {
+const Problem = ({title, difficulty, solved, category}) => {
   return (
-    // <div className="problem">
-    //   <h2>{title}</h2>
-    //   <p>{content}</p>
-    // </div>
     <tr>
       <td>{title}</td>
-      <td>{content.charAt(0)}</td>
-      <td>{content.charCodeAt(0) + 5}</td>
-      <td>{content}</td>
+      <td>{difficulty}</td>
+      <td>{Number(solved)}</td>
+      <td>{category}</td>
   </tr>
   );
 }

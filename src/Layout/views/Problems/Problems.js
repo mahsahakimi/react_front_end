@@ -20,38 +20,30 @@ const Problems = () => {
     const [problems, setProblems] = useState([]);
 
     useEffect(()=>{
-        console.log("Loading Data ...")
+        // console.log("Loading Data ...")
         sortTableByQuestionCount();
-        fetch("https://jsonplaceholder.typicode.com/posts")
-                .then(response=>response.json())
-                .then(data=>setProblems(data))
+        fetch("http://localhost:8081/problems")
+            .then(response=>response.json())
+            .then(data=>setProblems(data))
     },)
 
     return (
         <div>
-            {/* <h1>Problems Table</h1> */}
-            {/* <main>
-                {
-                    problems.map((problem)=>{
-                        return <Problem key={problem.id} title={problem.title} content={problem.body}/>
-                    })
-                }
-            </main> */}
             <main>
                 <h1>All Problems</h1>
                 <table id="problemsTable">
                     <thead>
                         <tr>
-                            <th>Problem</th>
-                            <th>Hardness</th>
-                            <th>Solved</th>
-                            <th>Label</th>
+                            <th>Title</th>
+                            <th>Difficulty</th>
+                            <th>Solved #</th>
+                            <th>Category</th>
                         </tr>
                     </thead>
                     <tbody>
                         {
                         problems.map((problem)=>{
-                            return <Problem key={problem.id} title={problem.title} content={problem.body}/>
+                            return <Problem key={problem.id} title={problem.title} difficulty={problem.difficulty} solved={problem.solved} category={problem.category}/>
                         })
                         }
                     </tbody>
