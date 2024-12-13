@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import { Link } from 'react-router-dom';
 import './Home.css';
 
 const Home = () => {
@@ -10,7 +11,7 @@ const Home = () => {
             <h4>
                 With the world's largest web developer site. 
             </h4>
-            <a href="#signup" id="big-button">Get Started</a>
+            <Link to="/Signup" id="big-button">Get Started</Link>
         </div>
     );
 }

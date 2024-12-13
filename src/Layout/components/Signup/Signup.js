@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import './Login.css';
+import './Signup.css';
 
-async function loginUser(credentials) {
-  return fetch('http://localhost:8081/login', {
-    method: 'POST',
+async function signupUser(credentials) {
+  return fetch('http://localhost:8081/signup', {
+    method: 'PUT',
     headers: {
       'Content-Type': 'application/json'
     },
@@ -13,14 +13,14 @@ async function loginUser(credentials) {
     .then(data => data.json())
  }
 
-export default function Login({ setToken }) {
+export default function Signup({ setToken }) {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [type, setType] = useState();
 
   const handleSubmit = async e => {
     e.preventDefault();
-    const token = await loginUser({
+    const token = await signupUser({
       username,
       password,
       type
@@ -28,14 +28,14 @@ export default function Login({ setToken }) {
     if (token.message)
       alert(token.message);
     else {
-      alert(`You logged in as ${token.username}`);
+      alert(`You signed up as ${token.username}`);
       setToken(token);
-    }
+    };
   }
 
   return(
-    <div className="login-wrapper">
-      <h1>Please Log In</h1>
+    <div className="signup-wrapper">
+      <h1>Please Sign Up</h1>
       <form onSubmit={handleSubmit}>
         <label>
           <p>Username</p>
@@ -57,7 +57,7 @@ export default function Login({ setToken }) {
   )
 }
 
-Login.propTypes = {
+Signup.propTypes = {
   setToken: PropTypes.func.isRequired
 };
 

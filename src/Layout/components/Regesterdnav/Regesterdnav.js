@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
-import './Navbar.css';
+import './Regesterdnav.css';
 
 const handleClick = () => {
   let myLinksElement = document.getElementById("myLinks");
@@ -20,7 +20,7 @@ const handleResize = () => {
   };
 }
 
-const Navbar = () => {
+const Regesterdnav = () => {
   useEffect(()=>{
     window.addEventListener("resize", handleResize, false);
   },)
@@ -31,7 +31,7 @@ const Navbar = () => {
           <div><Link to="/Problems">Problems</Link></div>
           <div><Link to="/Teachers">Teachers</Link></div>
           <div><Link to="/Students">Students</Link></div>
-          <div id="right"><Link to="/Login">Login</Link></div>
+          <div id="right"><Link to="/Profile">Profile</Link></div>
           <div><Link to="/About">About</Link></div>
         </div>
         <div><a id="icon" className="icon" onClick={handleClick}><i class="fa fa-bars"></i></a></div>
@@ -39,4 +39,6 @@ const Navbar = () => {
   );
 }
       
-export default Navbar;
+export default Regesterdnav;
+
+// #TODO
