@@ -23,16 +23,6 @@ const handleResize = () => {
 const Navbar = () => {
   useEffect(()=>{
     window.addEventListener("resize", handleResize, false);
-
-    // document.getElementById('icon').addEventListener("onclick", () => {
-    //   let myLinksElement = document.getElementById("myLinks");
-    //   if (myLinksElement.style.display === "none") {
-    //     myLinksElement.style.display = "block";
-    //     alert("done");
-    //   } else {
-    //       myLinksElement.style.display = "none";
-    //   };
-    // }, true);
   },)
   return (
     <nav className="navbar">
