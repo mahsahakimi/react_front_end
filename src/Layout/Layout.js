@@ -13,7 +13,8 @@ import Problems from './views/Problems/Problems';
 import About from './views/About/About';
 import Profile from './views/Profile/Profile';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import AuthContext from './AuthContext';
+import AuthContext from './contexts/AuthContext';
+import TypeContext from './contexts/TypeContext';
 
 const Layout = () => {
   const [token, setToken] = useState();
@@ -40,20 +41,22 @@ const Layout = () => {
 
   return (
     <AuthContext.Provider value={token.username}>
-      <Router>
-        <Header />
-        <Regesterdnav />
-        <Routes>
-            <Route path="/" element={<Home/>} />
-            <Route path="/Teachers" element={<Teachers/>} />
-            <Route path="/Students" element={<Students/>} />
-            <Route path="/Problems" element={<Problems/>} />
-            <Route path="/Profile" element={<Profile />} />
-            <Route path="/Signup" element={<Signup setToken={setToken} />} />
-            <Route path="/About" element={<About/>} />
-        </Routes>
-        <Footer />
-      </Router>
+      <TypeContext.Provider value={token.type}>
+        <Router>
+          <Header />
+          <Regesterdnav />
+          <Routes>
+              <Route path="/" element={<Home/>} />
+              <Route path="/Teachers" element={<Teachers/>} />
+              <Route path="/Students" element={<Students/>} />
+              <Route path="/Problems" element={<Problems/>} />
+              <Route path="/Profile" element={<Profile />} />
+              <Route path="/Signup" element={<Signup setToken={setToken} />} />
+              <Route path="/About" element={<About/>} />
+          </Routes>
+          <Footer />
+        </Router>
+      </TypeContext.Provider>
     </AuthContext.Provider>
   );
 }
