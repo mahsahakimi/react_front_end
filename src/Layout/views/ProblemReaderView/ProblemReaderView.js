@@ -1,3 +1,4 @@
+// this page not used :)
 import React, {useState,useEffect} from 'react';
 import ProblemReader from '../../components/ProblemReader/ProblemReader';
 
@@ -19,4 +20,3 @@ const ProblemReaderView = ({title}) => {
 }
 
 export default ProblemReaderView;
-

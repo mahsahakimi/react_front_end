@@ -37,10 +37,10 @@ const About = () => {
                     <p>Have questions or feedback? We’d love to hear from you! Reach out to us at <i>info@cleverclimb.com</i> or follow us on social media to stay updated on our latest features and community events.</p>
                 </section>
             </main>
-            <footer>
+            <div className='footi'>
                 <p>Thank you for visiting Clever Climb. Let’s reach new heights together!</p>
                 <p>Happy Climbing!</p>
-            </footer>
+            </div>
         </div>
     );
 }

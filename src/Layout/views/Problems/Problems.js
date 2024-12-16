@@ -2,7 +2,6 @@ import React, {useState,useEffect,useContext} from 'react';
 import Problem from '../../components/Problem/Problem';
 import './Problems.css';
 import AuthContext from '../../contexts/AuthContext';
-// import ProblemReaderView from '../ProblemReaderView/ProblemReaderView';
 
 async function saveProblem(credentials, type, authContext) {
     if (type === 't')
@@ -52,7 +51,6 @@ const Problems = ({username, type}) => {
     const [Op3, setOp3] = useState("");
     const [Op4, setOp4] = useState("");
     const [Answer, setAnswer] = useState("");
-    
 
     const handleSubmit = async e => {
         e.preventDefault();
@@ -76,7 +74,6 @@ const Problems = ({username, type}) => {
 
     useEffect(()=>{
         // console.log("Loading Data ...")
-
         sortTableByQuestionCount();
         if (type === 's')
             fetch(`http://localhost:8081/students/${username}/solved`)
@@ -86,11 +83,9 @@ const Problems = ({username, type}) => {
             fetch(`http://localhost:8081/problems/${username}`)
                 .then(response=>response.json())
                 .then(data=>setProblems(data))
-        
-        
     },)
 
-    // global
+    // for tabels
     if (!username)
         return (
             <div>

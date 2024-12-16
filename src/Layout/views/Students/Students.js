@@ -52,6 +52,3 @@ const Students = () => {
 }
 
 export default Students;
-
-// #TODO
-// <Student key={student.id} name={student.name} score={student.score} photo={"https://via.placeholder.com/150/771796"}/>

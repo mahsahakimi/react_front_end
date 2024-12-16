@@ -40,5 +40,3 @@ const Regesterdnav = () => {
 }
       
 export default Regesterdnav;
-
-// #TODO

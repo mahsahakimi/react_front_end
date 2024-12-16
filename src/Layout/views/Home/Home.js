@@ -6,16 +6,14 @@ const Home = () => {
     return (
         <div>
             <h1>
-                Play and Learn
+                Play & Learn
             </h1>
-            <h4>
+            <h3>
                 Let’s reach new heights together!
-            </h4>
+            </h3>
             <Link to="/Signup" id="big-button">Get Started</Link>
         </div>
     );
 }
 
 export default Home;
-
-// #TODO

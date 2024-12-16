@@ -52,5 +52,3 @@ const Teachers = () => {
 }
 
 export default Teachers;
-
-// #TODO

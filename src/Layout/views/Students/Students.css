@@ -4,13 +4,11 @@ main {
     margin: 0 auto;
     background-color: #f5f4f4;
 }
-
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
@@ -20,45 +18,35 @@ table {
     border-radius: 10px; 
     overflow: hidden;
 }
-
 table, th, td {
     border: 1px solid #dddddd;
 }
-
 th, td {
     padding: 12px;
     text-align: left;
 }
-
 th {
     background-color: #1f535f;
     color: white;
 }
-
 tr:nth-child(even) {
     background-color: #f9f9f9;
 }
-
 tr:nth-child(odd) {
     background-color: #f3f1f1bc;
 }
-
 tr td a {
     color: rgb(23, 139, 154);
 }
-
 th:first-child {
     border-top-left-radius: 10px;
 }
-
 th:last-child {
     border-top-right-radius: 10px;
 }
-
 tr:last-child td:first-child {
     border-bottom-left-radius: 10px;
 }
-
 tr:last-child td:last-child {
     border-bottom-right-radius: 10px;
 }

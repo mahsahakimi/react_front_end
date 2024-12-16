@@ -1,3 +1,4 @@
+/* this file not used :) */
 .container {
     display: inline-block;
     position: relative;
@@ -6,13 +7,11 @@
     font-size: x-large;
     margin: 2%;
 }
-
 .container input {
 position: absolute;
 opacity: 0;
 cursor: pointer;
 }
-
 .checkmark {
 position: absolute;
 top: 0;
@@ -22,25 +21,20 @@ width: 25px;
 background-color: #2196F3;
 border-radius: 50%;
 }
-
 .container:hover input ~ .checkmark {
 background-color: #ccc;
 }
-
 .container input:checked ~ .checkmark {
 background-color: #2196F3;
 }
-
 .checkmark:after {
 content: "";
 position: absolute;
 display: none;
 }
-
 .container input:checked ~ .checkmark:after {
 display: block;
 }
-
 .container .checkmark:after {
     top: 9px;
     left: 9px;
@@ -49,7 +43,6 @@ display: block;
     border-radius: 50%;
     background: white;
 }
-
 .submit-btn {
     display: inline-block;
     border: none;
@@ -60,7 +53,6 @@ display: block;
     font-size: large;
     margin: 7%;
   }
-  
   .submit-btn:hover {
     background-color: #ddd;
     color: black;

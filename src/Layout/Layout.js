@@ -19,7 +19,7 @@ import TypeContext from './contexts/TypeContext';
 const Layout = () => {
   const [token, setToken] = useState("");
 
-  // unknown
+  // unknown people
   if(!token) {
     return (
       <Router>
@@ -39,6 +39,7 @@ const Layout = () => {
     );
   }
 
+  // registerd people
   return (
     <AuthContext.Provider value={token.username}>
       <TypeContext.Provider value={token.type}>
