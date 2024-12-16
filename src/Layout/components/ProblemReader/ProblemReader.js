@@ -7,17 +7,15 @@ const ProblemReader = ({title, content, option_1, option_2, option_3, option_4})
         <h1>
             {title}
         </h1>
-        <span style="font-size: x-large;">
-            <p>
-                {content}
-            </p>
-            <p>
-                1.{option_1}
-                2.{option_2}
-                3.{option_3}
-                4.{option_4}
-            </p>
-        </span>            
+        <div>
+            <p><strong>{content}</strong></p>
+            <ol>
+                <li>{option_1}</li>
+                <li>{option_2}</li>
+                <li>{option_3}</li>
+                <li>{option_4}</li>
+            </ol>
+        </div>            
     </main>
   );
 };

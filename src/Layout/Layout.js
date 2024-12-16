@@ -17,7 +17,7 @@ import AuthContext from './contexts/AuthContext';
 import TypeContext from './contexts/TypeContext';
 
 const Layout = () => {
-  const [token, setToken] = useState();
+  const [token, setToken] = useState("");
 
   // unknown
   if(!token) {
@@ -29,7 +29,7 @@ const Layout = () => {
             <Route path="/" element={<Home/>} />
             <Route path="/Teachers" element={<Teachers/>} />
             <Route path="/Students" element={<Students/>} />
-            <Route path="/Problems" element={<Problems/>} />
+            <Route path="/Problems" element={<Problems username={""} type={""}/>} />
             <Route path="/Login" element={<Login setToken={setToken} />} />
             <Route path="/Signup" element={<Signup setToken={setToken} />} />
             <Route path="/About" element={<About/>} />
@@ -49,7 +49,7 @@ const Layout = () => {
               <Route path="/" element={<Home/>} />
               <Route path="/Teachers" element={<Teachers/>} />
               <Route path="/Students" element={<Students/>} />
-              <Route path="/Problems" element={<Problems/>} />
+              <Route path="/Problems" element={<Problems username={""}/>} type={""} />
               <Route path="/Profile" element={<Profile />} />
               <Route path="/Signup" element={<Signup setToken={setToken} />} />
               <Route path="/About" element={<About/>} />

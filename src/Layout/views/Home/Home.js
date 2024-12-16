@@ -9,7 +9,7 @@ const Home = () => {
                 Play and Learn
             </h1>
             <h4>
-                With the world's largest web developer site. 
+                Let’s reach new heights together!
             </h4>
             <Link to="/Signup" id="big-button">Get Started</Link>
         </div>
